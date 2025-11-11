@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Firewall Simulator — Karndeep Baror</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">fw-sim • Firewall Simulator</div>
+      <div class="creator">by <strong>Karndeep Baror</strong></div>
+    </header>
+
+    <main class="layout">
+      <aside class="controls">
+        <div class="panel">
+          <div class="panel-title">Controls</div>
+          <div class="btn-grid">
+            <button class="btn big" id="btnStart">▶ Start</button>
+            <button class="btn" id="btnStop">■ Stop</button>
+            <button class="btn" id="btnStep">▸ Step</button>
+            <button class="btn" id="btnShowRules">Show Rules</button>
+            <button class="btn" id="btnAddRule">Add Rule</button>
+            <button class="btn" id="btnShowLogs">Show Logs</button>
+            <button class="btn" id="btnClearLogs">Clear Logs</button>
+            <button class="btn" id="btnSimPkt">Simulate Pkt</button>
+          </div>
+        </div>
+
+        <div class="panel small-panel">
+          <div class="panel-title">Quick Add Rule</div>
+          <div class="form">
+            <select id="fAction">
+              <option>ALLOW</option><option>DENY</option>
+            </select>
+            <input id="fProto" placeholder="Protocol (TCP/UDP/any)" />
+            <input id="fSrc" placeholder="Source IP (any)" />
+            <input id="fDst" placeholder="Dest IP (any)" />
+            <input id="fPort" placeholder="Port (80/any)" />
+            <button class="btn primary" id="formAddRule">Add</button>
+          </div>
+        </div>
+      </aside>
+
+      <section class="console">
+        <div id="screen" class="screen"></div>
+        <div class="terminal-controls">
+          <button class="btn tiny" id="btnClear">Clear</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      IG: <a href="https://instagram.com/karndeepbaror" target="_blank">@karndeepbaror</a> • 
+      YT: <a href="https://www.youtube.com/@CryptArea" target="_blank">@CryptArea</a>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
